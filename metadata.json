@@ -1,0 +1,6 @@
+{
+  "name": "근로기준법 안내봇",
+  "description": "회사 취업규칙과 대한민국 근로기준법을 안내하는 카카오톡 스타일의 AI 챗봇입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
