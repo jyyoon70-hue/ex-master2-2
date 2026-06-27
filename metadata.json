@@ -1,6 +1,6 @@
 {
-  "name": "근로기준법 안내봇",
-  "description": "회사 취업규칙과 대한민국 근로기준법을 안내하는 카카오톡 스타일의 AI 챗봇입니다.",
+  "name": "사다리타기",
+  "description": "인디안 핑크 톤 배경의 사다리타기(ghost leg) 게임입니다. 참가자와 결과를 정한 뒤 사다리를 따라 도착지를 확인하세요.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
