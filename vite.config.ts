@@ -5,9 +5,13 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
+  // Vercel 등 루트 도메인 배포 시에는 base='/'를, GitHub Pages(프로젝트
+  // 페이지)에서는 '/ex-master2-2/' 하위 경로를 사용한다.
+  const isVercel = !!process.env.VERCEL;
+  const base =
+    mode === 'production' && !isVercel ? '/ex-master2-2/' : '/';
   return {
-    // GitHub Pages(프로젝트 페이지)에서 /ex-master2-2/ 하위 경로로 서빙됨
-    base: mode === 'production' ? '/ex-master2-2/' : '/',
+    base,
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
